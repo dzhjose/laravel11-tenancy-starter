@@ -1,0 +1,25 @@
+2024-10-06 10:39:34,051 INFO supervisord started with pid 1
+2024-10-06 10:39:35,054 INFO spawned: 'php-fpm' with pid 7
+2024-10-06 10:39:36,072 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-10-06 10:40:14,888 WARN received SIGQUIT indicating exit request
+2024-10-06 10:40:14,888 INFO waiting for php-fpm to die
+2024-10-06 10:40:14,892 INFO stopped: php-fpm (exit status 0)
+2024-10-06 10:40:16,258 INFO supervisord started with pid 1
+2024-10-06 10:40:17,260 INFO spawned: 'php-fpm' with pid 8
+2024-10-06 10:40:18,277 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-10-06 10:41:46,315 WARN received SIGQUIT indicating exit request
+2024-10-06 10:41:46,316 INFO waiting for php-fpm to die
+2024-10-06 10:41:46,320 INFO stopped: php-fpm (exit status 0)
+2024-10-06 10:41:48,186 INFO supervisord started with pid 1
+2024-10-06 10:41:49,189 INFO spawned: 'php-fpm' with pid 7
+2024-10-06 10:41:50,206 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-10-06 10:43:53,513 WARN received SIGQUIT indicating exit request
+2024-10-06 10:43:53,514 INFO waiting for php-fpm to die
+2024-10-06 10:43:53,545 INFO stopped: php-fpm (exit status 0)
+2024-10-06 10:43:54,879 INFO supervisord started with pid 1
+2024-10-06 10:43:55,882 INFO spawned: 'php-fpm' with pid 7
+2024-10-06 10:43:56,919 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-10-06 10:44:40,059 INFO reaped unknown pid 49 (exit status 0)
+2024-10-06 11:45:18,611 WARN received SIGQUIT indicating exit request
+2024-10-06 11:45:18,634 INFO waiting for php-fpm to die
+2024-10-06 11:45:18,710 INFO stopped: php-fpm (exit status 0)

@@ -1,0 +1,12 @@
+services:
+  php:
+    volumes:
+      - ./src:/var/www/html
+      - ./environments/.env:/var/www/html/.env
+
+  server:
+    ports:
+      - "${HOST_PORT}:${CONTAINER_PORT}"
+    volumes:
+      - ./src:/var/www/html
+      - ./environments/.env:/var/www/html/.env
