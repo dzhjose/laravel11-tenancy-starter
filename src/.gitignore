@@ -22,3 +22,5 @@ yarn-error.log
 
 .supervisor.log
 .supervidor.pid
+supervisor.log
+supervidor.pid

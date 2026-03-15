@@ -41,11 +41,13 @@ RUN addgroup -g ${GID} --system laravel && \
 RUN sed -i "s/user = www-data/user = laravel/g" /usr/local/etc/php-fpm.d/www.conf && \
     sed -i "s/group = www-data/group = laravel/g" /usr/local/etc/php-fpm.d/www.conf
 
-# Configurar supervisor
-RUN mkdir -p /etc/supervisor.d/
-
 # Copiar Composer
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
+
+# Configurar Supervisor
+RUN apk add --no-cache bash supervisor
+RUN sed -i 's/bin\/ash/bin\/bash/g' /etc/passwd
+RUN mkdir -p /etc/supervisor.d/
 
 # Etapa 2: Copiar el código fuente y la configuración
 FROM base AS final
@@ -61,5 +63,5 @@ COPY ./src .
 # Copiar configuración de supervisor
 COPY ./docker/php/supervisord.conf /etc/supervisor.d/supervisord.conf
 
-# Configurar el punto de entrada
-ENTRYPOINT ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor.d/supervisord.conf"]
+# Comando de inicio de PHP-FPM
+CMD ["php-fpm", "-y", "/usr/local/etc/php-fpm.conf", "-R"]
